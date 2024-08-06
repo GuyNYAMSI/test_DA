@@ -1,0 +1,10 @@
+../env_tf/*
+../env_tf/pyvenv.cfg
+../env_tf/Lib/*
+../rendu/.quarto
+../data/*
+../env_tf
+.quarto
+
+
+

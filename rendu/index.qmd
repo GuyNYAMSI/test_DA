@@ -1,0 +1,65 @@
+---
+title: "Modélisation de la sinistralité" 
+
+jupyter: python3
+format:
+  html:
+    
+    css: style_book.css
+    code-fold: true
+    code-tools: true
+    code-copy: true
+    highlight-style: dark
+    collapse-level: 2
+    
+    # numérotation des sections
+    number-sections: true
+    anchor-sections: true
+    # table de matière avec une profondeur à 2
+    toc: true
+    toc-depth: 3
+    number-depth: 3 
+    toc-title: Contenu de la note
+    toc-location: right
+    
+    embed-resources: true
+    smooth-scroll: true
+    grid:
+      sidebar-width: 352.4px
+      body-width: 1100px
+      margin-width: 352.4px
+      gutter-width: 1.5em
+  
+geometry:
+  - left=.75in
+  - textwidth=4.5in
+  - marginparsep=.25in
+  - marginparwidth=2.25in
+---
+
+## Résultat modélisation
+Faute de temps, nous n'avons pas assez exploré la description des sinistres, pouvant aider à mieux cerner de contexte du sinistre déclaré.
+Il est encore possible d'améliorer le feature engineering et ainsi améliorer le score de nos modèle. Nous avons néanmoins testé plusieurs modèles et obtenu les métriques ci-dessous.
+
+
+| Modèles                        | RMSE |
+|--------------------------------|------|
+| GLM gamma                      |31010      |
+| GLM Tweedie                    |27199      |
+| Light Gradient Boosting        |26155      |
+| Réseaux de neurone à 4 couches |26751      |
+
+
+
+## Annexes
+
+Contribution des variables issue de la modélisation.
+
+![](../outputs/auto_ml.png)
+
+shape_values
+![](../outputs/auto_ml2.png)
+
+best_autoMl
+
+![](../outputs/auto_ml3.png)

@@ -1,0 +1,73 @@
+project:
+  type: website
+
+website:
+  image: lfm.png
+  page-navigation: true
+
+
+
+  sidebar:
+    #logo: logo.png
+    style: docked
+    background: white
+    alignment: left
+    border: true
+    collapse-level: 1
+    pinned: true
+    
+    foreground: "#102C68"
+    title: "ceci est un titre"
+    contents:
+
+    - text: "Exploration des données"
+      file: data_exploration.ipynb
+    - text: "Modélisation de la sinistralité"
+      file: index.qmd
+  
+
+        # navigation items
+  navbar:
+    background: white
+
+    right:       
+      - icon: github
+        href: https://github.com/
+      - icon: twitter 
+        href: https://twitter.com/ 
+      - icon: linkedin
+        href: https://fr.linkedin.com/company/linkpact?trk=public_post_share-update_actor-image
+
+author-title: "Auteur"
+
+format:
+
+  html:
+    grid:
+      sidebar-width: 352.4px
+      body-width: 1100px
+      margin-width: 352.4px
+      gutter-width: 1.5em
+
+
+    theme:
+      light: [cosmo, theme.scss]
+    css: style_book.css
+    toc: true
+    toc-title: "Contenu de la note"
+    toc-depth: 3
+    number-depth: 3 # numbering up to sections/subsections/subsubsections (1/2/3)
+
+
+execute:
+  include: true
+  echo: false
+  warning: false
+  message: false
+
+geometry:
+  - left=.75in
+  - textwidth=4.5in
+  - marginparsep=.25in
+  - marginparwidth=2.25in
+

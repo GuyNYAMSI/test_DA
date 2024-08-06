@@ -1,0 +1,508 @@
+
+
+/*NB : une variable commençant par .var est paramétré dans le yml*/
+/*NB : une variable ne commençant par .var est paramétré dans le corps du fichier markdon*/
+/*le fichier .css regroupe l'ensemble des mises en formes paramétrés et agissant sur le yml et le markdown */
+
+/* La gestion des marges en pourcentage est préférable*/
+
+/*************************************************/
+#quarto-header{
+  left:15.8%;
+  object-position: right;
+  background-color: white;
+  border-bottom: 2px solid rgb(189, 191, 190);
+  z-index: 1;
+  padding-bottom: 0px;
+  padding-top: 0px !important;
+  margin-top: 0px !important;
+  color: rgb(0, 136, 81);
+}
+
+
+
+#quarto-sidebar {
+  width: 100%;
+  padding: 0px 0px 0px;
+  padding-top: 0em !important;
+}
+
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0px;
+  margin: auto;
+  border-bottom: 1px solid rgb(189, 191, 190);
+  max-height: 40px;
+}
+
+.ms-auto {
+  margin-left: auto !important;
+}
+.navbar-container .navbar-title{
+  padding-left: calc(6vh - 0px) !important;
+  width: 100%;
+  color: rgb(0, 34, 93); 
+}
+
+.navbar-expand-lg .navbar-collapse {
+  padding-right: 20px;
+  padding-left: 1000px;
+
+  flex-basis: auto;
+  -webkit-flex-basis: auto;
+
+}
+
+.sidebar-item {
+  margin-bottom: 0px;
+}
+.sidebar-item>* :hover,
+div.sidebar-item-container  :hover>span{
+  width: 1000px;
+  background-color: rgb(0, 136, 81) !important;
+  color: white !important;
+  list-style:upper-roman;
+  font-family: "Gandhi Serif", "Serif"; 
+  padding-left: 0;
+  padding-inline: 2;
+  font-size: auto;
+  line-height: 1.5;
+  font-size: .975rem;
+
+}
+
+#quarto-content>* {
+  padding: 0px 0px 0px;
+  
+  color: rgb(0, 34, 93); 
+
+}
+
+#quarto-sidebar>*, nav[role=doc-toc]>* {
+
+  transition: opacity .1s ease,border .1s ease;
+  text-overflow: ellipsis;
+  overflow-wrap: break-word;
+  line-height: 2;
+  margin-top: 0px;
+  position: relative;
+}
+
+div.sidebar-item-container>*,
+
+div.sidebar-menu-container {
+  transition: opacity .1s ease,border .1s ease;
+  padding: 0px 0px 0px !important;
+  margin-left: 5px;
+  text-overflow: ellipsis;
+  overflow-wrap: break-word;
+  width: 100%;
+  line-height: 1.5;
+  position: relative;
+
+}
+
+.sidebar.sidebar-navigation>* {
+  padding-top: -3em !important;
+  width: calc(50vh - 84px);
+}
+div.sidebar-item-container  .active,
+div.sidebar-item-container  .active>span>*{
+  background-color: rgb(0, 136, 81) !important;
+  padding: 0px 0px 0px;
+  color: white !important;
+  margin-bottom: 0px;
+  font-size: .975rem;
+  line-height: 1.2;
+  padding-inline: 2;
+
+}
+
+.sidebar nav[role=doc-toc] ul>li>a.active,
+.sidebar nav[role=doc-toc] ul>li>ul>li>a.active {
+  border-left: 1px solid white;
+  color: white !important;
+}
+
+
+.sidebar nav[role=doc-toc]>ul li  .active,
+
+.sidebar nav[role=doc-toc]>ul li .show>.nav-link, 
+.sidebar nav[role=doc-toc]>ul li .sidebar-link>code{
+  background-color: rgb(0, 136, 81);
+  line-height: 1.2;
+  padding-inline: 3;
+  color: white;
+  margin-bottom: -5px;
+  font-size: .875rem;
+  width: auto;
+}
+
+.sidebar-navigation .sidebar-item div.sidebar-item-container,
+.sidebar-item .chapter-number{
+  font-size: .875rem;
+ 
+  color: rgb(0, 34, 93);
+  width: auto;
+  font-family: "Gandhi Serif", "serif" !important;
+  font-style: Bold;
+  margin-bottom: 0px;
+  line-height: 1.2;
+  padding-bottom: 0px;
+  padding-top: 0px !important;
+  margin-top: 0px !important;
+}
+
+/*********************************************************/
+body:not(.floating) .nav-footer {
+  border-top: 0px solid white;
+}
+.nav-footer {
+  min-height: 7px;
+  margin-left: auto;
+  left:15.8%;
+  object-position: right;
+  background-color: white;
+  z-index: 1;
+
+  padding: 0px 0px 0px;
+  
+  color: rgb(0, 136, 81);
+  font-weight: bold;
+  font-family: "Gandhi Serif", "Serif";
+}
+ 
+/*table de matière avec une profondeur à 2*/
+#toc-title{
+  font-size: 130%; 
+  color: rgb(0, 34, 93); /* blue : couleur des titres et du texte markdown */
+  font-family: "Gandhi Serif", "Serif";   
+  border-bottom: 3px solid rgb(0, 136, 81);
+  padding-top: 0%;
+  font-variant: small-caps;
+}
+div#quarto-margin-sidebar.sidebar.margin-sidebar {
+  padding: 40px 0px 0px;
+  max-height: calc(100vh - 64px);
+  top: 60px;
+  width: calc(50vh - 84px);
+  height: 900px;
+}
+
+
+.div.pt-lg-2,.mt-2 {
+  padding-top: 0px !important;
+  margin-top: -10px !important;
+}
+ul.list-unstyled.mt-1 {
+  margin-top: -3rem !important;
+}
+
+
+div.sidebar-menu-container {
+  width: auto;
+  height: auto;
+  padding: 10px 0px 0px;
+  max-height: calc(100vh - 64px);
+  top: 64px;
+}
+/*********************************************************/
+
+header.quarto-title-block.default .quarto-title-meta-contents p,
+#title-block-header.quarto-title-block.default .quarto-title-authors p, 
+#title-block-header.quarto-title-block.default .quarto-title-affiliations p {
+  margin-bottom: 0.1em;
+  font-family: "Gandhi Serif", "serif" !important;
+  color: rgb(0, 34, 93);
+  font-weight: bold;
+}
+
+/*################gestion de la page ####################*/
+#quarto-content{
+  color: rgb(0, 34, 93);
+}
+
+body.docked .page-columns {
+    display: grid;
+    gap: 0;
+    grid-template-columns: [screen-start] 1.5em
+    [screen-start-inset] 5fr 
+    [page-start] minmax(25px, calc( 100px - 8em )) 
+    [page-start-inset] minmax(50px, calc( 300px - 8em )) 
+    [body-start-outset] minmax(25px, calc( 160px - 8em )) 
+    [body-start] 1.5em 
+    [body-content-start] minmax(630px, calc( 1060px - 7em )) /*min pour laptop et max pour desktop*/
+    [body-content-end] 1.5em 
+    [body-end] minmax(30px, calc( 120px - 8em )) 
+    [body-end-outset] minmax(60px, calc( 360px - 8em )) 
+    [page-end-inset] minmax(30px, calc( 120px - 8em )) 
+    [page-end] 5fr 
+    [screen-end-inset] 1.5em [screen-end];
+}
+
+/*################gestion de la page ####################*/
+
+
+*::before, *::after{
+  box-sizing: border-box;
+  color: rgb(0, 34, 93) !important;
+  width: auto;
+}
+ 
+
+
+.nav-footer a {
+  color: rgb(0, 136, 81);
+}
+
+.nav-page a {
+  color: rgb(0, 136, 81);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.sidebar-logo {
+  display: block;
+  
+  
+  margin-right: 0px;
+  width: fit-content;
+  height: fit-content;
+  padding: 0px 0px 0px;
+  max-width: 110%;
+  
+  box-sizing:border-box;
+
+  border-bottom: 1px solid rgb(189, 191, 190);
+  }
+
+
+img, legend {
+  border: 1;
+  box-sizing: fit-content;
+}
+
+
+
+header {
+  display: block;
+  border-top: 30px;
+  padding-top: 30px !important;
+  margin-top: 30px !important;
+}
+
+
+
+
+
+/* couleur et police du texte/légende(tableau,image) écrit en markdown */
+body, caption {
+  color: rgb(0, 34, 93); /* blue : couleur des titres et du texte markdown */
+  font-family: Gandhi,"Gandhi Serif", Serif; /*famille de police d'écriture pour le texte et les titre markdown*/
+  font-size: 100%;
+  position: right;
+}
+
+
+
+.header-section-number {
+  color:rgb(0, 34, 93);
+}
+
+
+
+/* taille de la police */
+.title {font-size: 300% !important}/* titre paramétré dans le yml du notebook*/
+
+h1 {font-size: 160%;}
+h2 {font-size: 140%}
+h3, .date, .author {font-size: 120%} /* taille des section défini par #, ## ou ### dans le markdown*/
+h4 {font-size: 110%}
+/* Bold : texte en gras les sections markdown et les parties caption et author du ymal*/
+h1, h2, h3, h4, caption, .caption, .author, .date {font-weight: bold;
+  color: rgb(0, 34, 93);}
+
+/* Main title */
+.title{
+  font-variant: small-caps;
+  margin-top: 2.5em;
+  margin-bottom: 0.5em;
+  color: rgb(0, 34, 93);
+  border: 5px solid rgb(0, 136, 81); /* rgb(0, 136, 81) */
+}
+
+/* Centering */
+.title {
+  text-align: center;
+}
+
+caption, .caption {
+  text-align: center;
+}
+/* Tables and formula adjust to page width */
+.MathJax_Display, .MJXc-display, .MathJax_SVG_Display {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+/* Justify */
+p {text-align: justify;}
+
+/* Margin */
+.author {font-family: "Bayshore", cursive; margin-bottom: 2em;}
+.date {font-variant: normal; margin-bottom: 2em;}
+/* souligne les titres h1 défini par # dans markdown sans ajustement sur le contenu */
+h1,.navbar-brand-container {
+  border-bottom: 3px solid rgb(0, 136, 81); /* rgb(0, 136, 81) */
+}
+
+/* souligne les titres h2 défini par ## dans markdown avec ajustement sur le contenu */
+h2 {
+  border-bottom: 3px solid rgb(0, 136, 81); /* rgb(0, 136, 81) */
+  width: fit-content;
+}
+/* souligne les titres h3 défini par ### dans markdown avec ajustement sur le contenu */
+h3 {
+  border-bottom: 2px solid rgb(0, 136, 81); /* blue */
+  width: fit-content;
+}
+h4 {
+  border-bottom: 2px solid rgb(0, 136, 81); /* blue */
+  width: fit-content;
+}
+
+a { color: rgb(0, 136, 81); text-decoration:none}
+a:hover { color: rgb(0, 136, 81);text-decoration:underline}
+
+
+/* Tables entête*/
+
+.table>thead {
+  vertical-align: bottom;
+  background-color: rgb(0, 136, 81);
+  color: white;
+  font-family: "Gandhi Serif", "serif" !important;
+  border-top-width: 1px;
+  border-top-color: rgb(0, 34, 93);
+  border-left-width: 1px;
+  border-left-color: rgb(0, 34, 93);
+  border-right-width: 1px;
+  border-right-color: rgb(0, 34, 93);
+  
+} 
+th {
+  color: white;
+  text-align: inherit;
+  text-align: -webkit-match-parent;
+}
+
+.table>:not(:first-child) {
+  border-top-width: 1px;
+  border-top-color: rgb(0, 34, 93);
+  color: rgb(0, 34, 93);
+  border-left-width: 1px;
+  border-left-color: rgb(0, 34, 93);
+  border-right-width: 1px;
+  border-right-color: rgb(0, 34, 93);
+}
+
+.panel-caption, .figure-caption, figcaption {
+  color: rgb(0, 34, 93);
+  font-family: "Gandhi Serif", "Serif"; 
+}
+
+
+/***********************************************************************/
+/********************** Les blocks box**********************************/
+/***********************************************************************/
+.infobox {
+  padding: 1em 1em 0.5em 6em; /* Espacement pour le texte */
+  text-align: left;
+  margin-bottom: 10px; /* Espace à laisser après l'encadré */
+  border: 2px solid rgb(0, 136, 81); /* rgb(0, 136, 81) */
+  border-radius: 10px;
+  background: rgb(248, 248, 248) 1em center/5em no-repeat;
+}
+
+.banner {
+  padding: 1em 1em 0.5em 1em; /* Espacement pour le texte */
+  text-align: left;
+  margin-bottom: 10px; /* Espace à laisser après l'encadré */
+  border: 2px solid rgb(0, 136, 81); /* rgb(0, 136, 81) */
+  background: rgb(0, 136, 81) 1em no-repeat;
+}
+
+.banner2 {
+  padding: 1em 1em 1em 1em; /* Espacement pour le texte */
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 10px; /* Espace à laisser après l'encadré */
+  border: 2px solid rgb(0, 34, 93); /* blue */
+  background: rgb(0, 34, 93) 1em no-repeat; /* blue */ 
+  box-sizing: content-box;
+}
+
+.banner2 > p {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.banner > p, .banner2 > p {color: white !important;}
+
+.question {
+  background-image: url("icons/question.png");
+}
+
+.objectif {
+  background-image: url("icons/target.png");
+}
+
+.attention {
+  background-image: url("icons/warning.png");
+}
+
+.remarque {
+  background-image: url("icons/brain.png");
+}
+
+.aretenir {
+  background-image: url("icons/teacher.png");
+}
+
+.parametre {
+  background-image: url("icons/parametres.png");
+}
+
+.approfondir {
+  background-image: url("icons/tache.png");
+}
+
+div.mermaid {
+  text-align: center;
+  position:relative;
+}
+
+.callout {
+  background-color: rgb(0, 34, 93);
+}
+
+
+element.style {
+  width: 318px !important;
+}
+
+
+
+
+#sidebar-title {
+  /* Styles pour le titre de la barre latérale */
+  /* Exemple : changer la couleur du texte en rouge */
+  color: red;
+  /* Autres styles CSS pour modifier l'apparence du titre */
+}
+
